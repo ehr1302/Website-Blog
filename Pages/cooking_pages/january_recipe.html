@@ -11,6 +11,52 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../../assets/css/main.css" />
+    <style>
+        /* Reverse the order - sidebar first, then main */
+        body.is-preload #wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        /* Sidebar on the left */
+        #sidebar {
+            order: 1;
+            width: 400px;
+            min-width: 280px;
+            border-right: 1px solid rgba(160, 160, 160, 0.3);
+            padding-right: 1.5em;
+            margin-right: 1.5em;
+        }
+        
+        /* Main content on the right */
+        #main {
+            order: 2;
+            flex-grow: 1;
+        }
+        
+        /* Responsive: stack on mobile */
+        @media screen and (max-width: 736px) {
+            body.is-preload #wrapper {
+                flex-direction: column;
+            }
+            
+            #sidebar {
+                order: 2;
+                width: 100%;
+                min-width: 100%;
+                border-right: none;
+                border-top: 1px solid rgba(160, 160, 160, 0.3);
+                padding-right: 0;
+                margin-right: 0;
+                padding-top: 2em;
+                margin-top: 2em;
+            }
+            
+            #main {
+                order: 1;
+            }
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -18,7 +64,41 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Main -->
+        <!-- Sidebar FIRST (left side) -->
+        <div id="sidebar">
+            <div class="inner">
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/index.html">Homepage</a></li>
+                        <li><a>Reviews (Coming Soon)</a></li>
+                        <li><a href="/Pages/cooking.html">Cooking</a></li>
+                        <li><a>Opinion (Coming Soon)</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>About Me</h2>
+                    </header>
+                    <p>Hi! I'm Elena and this is my blog Elena Writes. I discuss all sorts of topics that make me ponder, most often books and food and sometimes both at the same time. Thanks for stopping by :)</p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a href="#">eruether@icloud.com</a></li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; 2025 Elena Writes. All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Main content SECOND (right side) -->
         <div id="main">
             <div class="inner">
 
@@ -30,194 +110,66 @@
                 </header><br>
 
                 <header>
-                    <h1>January Favourite Eats<h1>
+                    <h1>January Favourite Eats</h1>
                 </header>
-                <p>I hope you’re all congratulating yourselves on getting through the darkest weeks of the year! I can’t
-                    wait for the sun to keep setting later and later- every minute counts. If you’re in need of any
-                    recipe inspiration to get you through the rest of winter, here are the best things I cooked and
-                    baked in January.</p>
+                <p>I hope you're all congratulating yourselves on getting through the darkest weeks of the year! I can't wait for the sun to keep setting later and later- every minute counts. If you're in need of any recipe inspiration to get you through the rest of winter, here are the best things I cooked and baked in January.</p>
 
-                </header>
                 <h2>Raspberry Streusel Cake</h2>
-                </header>
+                <p>Find the recipe here: <a href="https://www.theguardian.com/lifeandstyle/2013/jul/12/raspberry-recipes-fearnley-whittingstall" target="_blank">The Guardian</a></p>
 
+                <p>Unconventional for a January cake but sometimes you just need a taste of summer to get you through! A friend of mine introduced me to this recipe by Hugh Fearnley Whittingstall a few years ago and I've now made it at least 5 times. Some have been better than others but when the bake goes well there is nothing more I want from a cake. Crunchy, buttery crumble topping, freshness and a bit of acidity from the raspberries in the middle, and a delicate sponge at the bottom.</p>
 
-                <p>Find the recipe here:
-                    https://www.theguardian.com/lifeandstyle/2013/jul/12/raspberry-recipes-fearnley-whittingstall</p>
-
-                <p>Unconventional for a January cake but sometimes you just need a taste of summer to get you through! A
-                    friend of mine introduced me to this recipe by Hugh Fearnley Whittingstall a few years ago and I’ve
-                    now made it at least 5 times. Some have been better than others but when the bake goes well there is
-                    nothing more I want from a cake. Crunchy, buttery crumble topping, freshness and a bit of acidity
-                    from the raspberries in the middle, and a delicate sponge at the bottom.
-
-                    While the cake has two components (the crumble and the sponge), it is incredibly quick and simple to
-                    make. The only downside to making it in winter is the lack of fresh raspberries with which to
-                    decorate it– but topped with a good dusting of icing sugar no one will notice.
-                </p>
+                <p>While the cake has two components (the crumble and the sponge), it is incredibly quick and simple to make. The only downside to making it in winter is the lack of fresh raspberries with which to decorate it– but topped with a good dusting of icing sugar no one will notice.</p>
 
                 <p>My tips:</p>
-                <p>• Given the scarcity and cost of raspberries in January, I used frozen raspberries this time around
-                    and they worked really well. I usually follow the recipe’s suggested 200g of raspberrie but this
-                    time I used about 250g and would recommend this – the cake needs a good amount of raspberries to
-                    give it enough flavour and texture.
-                </p>
-                <p>• I ended up leaving the cake in the oven for an extra 10 minutes – while accidental, I would also
-                    recommend
-                    this if your cake doesn’t quite look done after 45 minutes. I’ve made versions in the past where the
-                    sponge has been a little underdone after 45 minutes. I also tend not to toast the almonds as I find
-                    they get a good amount of colour from the oven anyway.</p>
+                <p>• Given the scarcity and cost of raspberries in January, I used frozen raspberries this time around and they worked really well. I usually follow the recipe's suggested 200g of raspberries but this time I used about 250g and would recommend this – the cake needs a good amount of raspberries to give it enough flavour and texture.</p>
+                <p>• I ended up leaving the cake in the oven for an extra 10 minutes – while accidental, I would also recommend this if your cake doesn't quite look done after 45 minutes. I've made versions in the past where the sponge has been a little underdone after 45 minutes. I also tend not to toast the almonds as I find they get a good amount of colour from the oven anyway.</p>
 
                 <!-- Image after ~250 words -->
                 <img src="../../images/streusel cake.jpg" width="400" alt="streusel cake">
 
+                <h2>Rosemary Polenta with Mixed Mushrooms and Taleggio</h2>
+                <p>Find the recipe here: <a href="https://ottolenghi.co.uk/pages/recipes/mushroom-herb-polenta" target="_blank">Ottolenghi</a></p>
 
+                <p>A true winter warmer, this Ottolenghi recipe is brilliant when you want something hearty and comforting but don't want to go through all the effort needed to make a lasagne or shepherd's pie. Despite not being the most vibrant dish, I think it looks really pretty on a nice plate and would be a fab vegetarian main for a dinner party.</p>
 
-                <header>
-                    <h2>Rosemary Polenta with Mixed Mushrooms and Taleggio</h2>
-                </header>
-                <p>Find the recipe here: https://ottolenghi.co.uk/pages/recipes/mushroom-herb-polenta</p>
-
-                <p>A true winter warmer, this Ottolenghi recipe is brilliant when you want something hearty and
-                    comforting but don’t want to go through all the effort needed to make a lasagne or shepherd’s pie.
-                    Despite not being the most vibrant dish, I think it looks really pretty on a nice plate and would be
-                    a fab vegetarian main for a dinner party.</p>
-
-                <p>I’ve made this recipe a couple times now, always using the traditional polenta which takes a while to
-                    cook (around 45 minutes) because it’s all that I had on hand. Ottolenghi does say you can also use
-                    the quick cook version, which would make this a great weekday dinner option too. </p>
+                <p>I've made this recipe a couple times now, always using the traditional polenta which takes a while to cook (around 45 minutes) because it's all that I had on hand. Ottolenghi does say you can also use the quick cook version, which would make this a great weekday dinner option too.</p>
 
                 <p>My tips:</p>
-                <p>• I tend to skip the tarragon because I’m not a fan of the aniseed flavour and it still tastes great!
-                </p>
+                <p>• I tend to skip the tarragon because I'm not a fan of the aniseed flavour and it still tastes great!</p>
                 <p>• I sliced an onion and caramelised it in the pan before adding the mushrooms.</p>
-                <p>• The first time I made it, I followed instructions and transferred the polenta to a baking sheet,
-                    melting the taleggio under the grill. It was a bit of a faff to then transfer this to plates and
-                    ended up looking a bit messy as the polenta and mushrooms mixed together. The second time I simply
-                    spread the mushrooms across a pan on low heat and topped with the taleggio, trying to avoid the
-                    cheese melting onto the pan’s surface. It is much easier to serve polenta this way, from the pot
-                    rather than a baking sheet, and looks nicer when served as you can top it neatly with the
-                    mushroom-taleggio mix.</p>
+                <p>• The first time I made it, I followed instructions and transferred the polenta to a baking sheet, melting the taleggio under the grill. It was a bit of a faff to then transfer this to plates and ended up looking a bit messy as the polenta and mushrooms mixed together. The second time I simply spread the mushrooms across a pan on low heat and topped with the taleggio, trying to avoid the cheese melting onto the pan's surface. It is much easier to serve polenta this way, from the pot rather than a baking sheet, and looks nicer when served as you can top it neatly with the mushroom-taleggio mix.</p>
 
                 <img src="../../images/januart_blog_image.jpg" width="400" alt="Blog Image">
 
-                <header>
-                    <h2>Soft Pretzels</h2>
-                </header>
+                <h2>Soft Pretzels</h2>
+                <p>Find the recipe here: <a href="https://sallysbakingaddiction.com/easy-homemade-soft-pretzels/#tasty-recipes-66433" target="_blank">Sally's Baking Addiction</a></p>
 
-                <p>Find the recipe here:
-                    https://sallysbakingaddiction.com/easy-homemade-soft-pretzels/#tasty-recipes-66433</p>
-
-                <p>I had never made pretzels before this, which is why I am electing to omit the photo of them, but it
-                    was surprisingly straightforward, fun, and quick.</p>
+                <p>I had never made pretzels before this, which is why I am electing to omit the photo of them, but it was surprisingly straightforward, fun, and quick.</p>
 
                 <p>My tips:</p>
+                <p>• Make sure you roll out the dough until it's long enough before twisting it into a pretzel as otherwise you won't be able to make the classic shape.</p>
+                <p>• Next time I make these I'm going to tip the pretzels onto their side with a pair of tongs before taking them out of the bicarbonate of soda bath – I didn't do this and they ended up having a pale ring around the middle.</p>
 
-                <p>• Make sure you roll out the dough until it’s long enough before twisting it into a pretzel
-                    as otherwise you won’t be able to make the classic shape.</p>
-                <p>• Next time I make these I’m going to tip the pretzels onto their side with a pair of tongs before
-                    taking them out of the bicarbonate of soda bath – I didn’t do this and they ended up having a pale
-                    ring around the middle. </p>
+                <h2>Courgette and Leek Flatbread</h2>
+                <p>This last recipe is one of my own messy improvisations. It was borne out of a failed pizza dough (the yeast had expired) and my attempt to save it by combining with an in-date yeast, water, oil and sugar mixture. Faced with a whole lot of leftover dough the next day, I used some for a flammkuchen style flatbread that turned out surprisingly well.</p>
 
-                <header>
-                    <h2>Courgette and Leek Flatbread</h2>
-                </header>
+                <p>Don't follow my method for making the dough; rather, make a flammkuchen dough or a pizza dough rolled really thin (I normally use <a href="https://www.jamieoliver.com/recipes/bread/pizza-dough/" target="_blank">this recipe</a> from Jamie Oliver when making pizza).</p>
 
-                <p>This last recipe is one of my own messy improvisations. It was borne out of a failed pizza dough (the
-                    yeast had expired) and my attempt to save it by combining with an in-date yeast, water, oil and
-                    sugar mixture. Faced with a whole lot of leftover dough the next day, I used some for a flammkuchen
-                    style flatbread that turned out surprisingly well.</p>
-
-                <p>Don’t follow my method for making the dough; rather, make a flammkuchen dough or a pizza dough rolled
-                    really thin (I normally use this recipe https://www.jamieoliver.com/recipes/bread/pizza-dough/ from
-                    Jamie Oliver when making pizza).</p>
-
-                <p>For toppings, I used a bit of cream cheese (but would recommend ricotta) and cheddar. I’d add a
-                    little mozzarella too if you have it. With it being the season for leeks we have a surplus of them
-                    at home at the moment; I used a small one up here. I also used a whole small courgette; make sure to
-                    slice thinly. Sprinkle with salt, pepper, thyme and oregano and pop into the oven at 210C for 10
-                    minutes or until cooked through and slightly golden brown around the edges. Serve with a drizzle of
-                    olive oil.</p>
-                <img src="../../images/courgette flatbread.heic" width="400" alt="courgette flatbread" </div> </div> <!--
-                    Sidebar -->
-                <div id="sidebar">
-                    <div class="inner">
-
-                        <!-- Search 
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>-->
-
-                        <!-- Menu -->
-                        <nav id="menu">
-                            <header class="major">
-                                <h2>Menu</h2>
-                            </header>
-                            <ul>
-                                <li><a href="/index.html">Homepage</a></li>
-                                <li><a>Reviews (Coming Soon)</a></li>
-                                <li><a href="/Pages/cooking.html">Cooking</a></li>
-                                <li><a>Opinion (Coming Soon)</a></li>
-                                <!--
-						<li>
-							<span class="opener">Submenu</span>
-							<ul>
-								<li><a href="#">Lorem Dolor</a></li>
-								<li><a href="#">Ipsum Adipiscing</a></li>
-								<li><a href="#">Tempus Magna</a></li>
-								<li><a href="#">Feugiat Veroeros</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Etiam Dolore</a></li>
-						<li><a href="#">Adipiscing</a></li>
-						<li>
-							<span class="opener">Another Submenu</span>
-							<ul>
-								<li><a href="#">Lorem Dolor</a></li>
-								<li><a href="#">Ipsum Adipiscing</a></li>
-								<li><a href="#">Tempus Magna</a></li>
-								<li><a href="#">Feugiat Veroeros</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Maximus Erat</a></li>
-						<li><a href="#">Sapien Mauris</a></li>
-						<li><a href="#">Amet Lacinia</a></li>
-					</ul>-->
-                        </nav>
-
-                        <!-- Section -->
-                        <section>
-                            <header class="major">
-                                <h2>About Me</h2>
-                            </header>
-                            <p>Hi! I’m Elena and this is my blog Elena Writes. I discuss all sorts of topics that make
-                                me
-                                ponder, most often books and food and sometimes both at the same time. Thanks for
-                                stopping by :)
-                            </p>
-                            <ul class="contact">
-                                <li class="icon solid fa-envelope"><a href="#">eruether@icloud.com</a></li>
-                            </ul>
-                        </section>
-
-                        <!-- Footer -->
-                        <footer id="footer">
-                            <p class="copyright">&copy; 2025 Elena Writes. All rights reserved.</a>.</p>
-                        </footer>
-
-                    </div>
-                </div>
-
+                <p>For toppings, I used a bit of cream cheese (but would recommend ricotta) and cheddar. I'd add a little mozzarella too if you have it. With it being the season for leeks we have a surplus of them at home at the moment; I used a small one up here. I also used a whole small courgette; make sure to slice thinly. Sprinkle with salt, pepper, thyme and oregano and pop into the oven at 210°C for 10 minutes or until cooked through and slightly golden brown around the edges. Serve with a drizzle of olive oil.</p>
+                
+                <img src="../../images/courgette flatbread.heic" width="400" alt="courgette flatbread">
             </div>
+        </div>
 
-            <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 
